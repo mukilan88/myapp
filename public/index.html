@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="uin" method="POST">
+    {% csrf_token %}
+    Enter the User Name : <input type="text" name="uName"><br>
+    Enter the Password.: <input type="password" name="uPass"><br>
+    <input type="submit">
+</form>
+
+{% endblock %}
