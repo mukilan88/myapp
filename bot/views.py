@@ -24,7 +24,7 @@ def uin(request):
     if request.method == 'POST':
         strName = request.POST['uName']
         strPass = request.POST['uPass']
-        if strName == 'mukilan' and strPass == 'ravi123':
+        if strName == 'mukilan' or 'admin' and strPass == 'ravi123' or 'mukil88':
             return render(request, 'home.html')
     else:
         return render(request, 'uin.html')
