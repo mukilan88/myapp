@@ -9,12 +9,12 @@ def home(request):
     return render(request,'home.html')
 
 def bot(request):
-    strURL = request.GET['url']
-    strNo = int(request.GET['no'])
+    strURL = request.POST['url']
+    strNo = int(request.POST['no'])
     for strNo in range(strNo):
-       webbrowser.get('chrome').open(strURL, new=2)
-       time.sleep(10)
-    return render(request, 'index.html')
+        webbrowser.get('chrome').open(strURL, new=2)
+        time.sleep(10)
+    return render(request, 'home.html')
 
 # Cerate your login here.
 def index(request):
